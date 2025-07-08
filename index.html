@@ -54,17 +54,81 @@
             padding: 0.5rem 0;
             border-bottom: 1px solid #eee;
         }
+        .hours-box {
+            background: #ffffff22; /* subtle white overlay */
+            border: 2px solid #fff;
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.75rem 1.25rem;
+            border-radius: 8px;
+            font-weight: bold;
+            color: #fff;
+            font-size: 1rem;
+            line-height: 1.4;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+            }
+        .hours-box .subtext {
+            display: block;
+            font-size: 0.9rem;
+            font-weight: normal;
+            color: #e0f0ff;
+            }
+        .hours-link .hours-box:hover {
+            transform: scale(1.03);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            }
+        
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            padding: 1rem;
+            text-align: center;
+            }
+
+        .logo {
+            width: 120px;
+            height: auto;
+            flex-shrink: 0;
+            }
+
+        .title-text {
+            max-width: 600px;
+            }
+
+        @media (max-width: 600px) {
+            .header-content {
+                flex-direction: column;
+            }
+            .title-text {
+                text-align: center;
+            }
+            }
     </style>
 </head>
 <body>
     <header>
-        <h1>Alabasteria Cleaning Services</h1>
-        <p>Your trusted partner for spotless spaces</p>
+        <div class="header-content">
+            <img src="Images/Logo.png" alt="Alabasteria Cleaning Services Logo" class="logo">
+            <div class="title-text">
+                <h1>Alabasteria Cleaning Services</h1>
+                <p>Your trusted partner for spotless spaces</p>
+                <a href="contact.html" class="hours-link">
+                    <div class="hours-box">
+                        🕒 <strong>Hours:</strong> Mon–Fri 8am–6pm | Sat Closed | Sun 9am–1pm<br>
+                        <span class="subtext">For Commercial Cleaning Consultations</span>
+                    </div>
+                </a>
+            </div>
+        </div>
     </header>
     <nav>
+        <a href="#index">Home</a>
         <a href="#about">About</a>
         <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
+        <a href="contact.html">Contact</a>
     </nav>
     <div class="container">
         <section id="about">
@@ -89,19 +153,11 @@
                 Email: <a href="mailto:info@alabasteriacleaning.com">info@alabasteriacleaning.com</a><br>
                 Phone: (123) 456-7890
             </p>
-            <form>
-                <label for="name">Name:</label><br>
-                <input type="text" id="name" name="name" required><br><br>
-                <label for="email">Email:</label><br>
-                <input type="email" id="email" name="email" required><br><br>
-                <label for="message">Message:</label><br>
-                <textarea id="message" name="message" rows="4" required></textarea><br><br>
-                <button type="submit">Send Message</button>
-            </form>
         </section>
     </div>
     <footer>
-        &copy; 2024 Alabasteria Cleaning Services. All rights reserved.
-    </footer>
+  &copy; 2024 Alabasteria Cleaning Services. All rights reserved.<br>
+  <small>Hours: Mon–Fri 8am–6pm | Sat Closed | Sun 9am-1pm</small>
+</footer>
 </body>
 </html>
