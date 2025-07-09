@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alabasteria Cleaning Services</title>
+    <link rel="icon" href="Images/Logo-3.ico" type="image/x-icon">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -89,15 +90,19 @@
             }
 
         .logo {
-            width: 120px;
+            width: 220px;
             height: auto;
-            flex-shrink: 0;
+            /* flex-shrink: 0; */
+            position: absolute;
+            top: 1rem;
+            left: 380px;
             }
 
         .title-text {
             max-width: 600px;
             }
 
+        
         @media (max-width: 600px) {
             .header-content {
                 flex-direction: column;
@@ -105,13 +110,99 @@
             .title-text {
                 text-align: center;
             }
+        .logo {
+                display: none; /* Hide logo on smaller screens */
+            }    
+        }
+
+        @media (max-width: 1705px) {
+            .logo {
+                width: 180px; /* Adjust logo size for smaller screens */
+                left: 300px; /* Adjust position for smaller screens */
             }
-    </style>
+        }
+
+        @media (max-width: 1440px) {
+            .logo {
+                display: none; /* Hide logo on smaller screens */
+            }
+        }
+
+        @media (min-width: 1846px) {
+            .logo {
+                display: none;
+            }
+        }
+        .carousel-section {
+    margin: 1rem auto;
+    padding: 0 1rem;
+  }
+
+  .carousel-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .carousel-heading {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #1c6ca1;
+    white-space: nowrap;
+  }
+
+  .carousel {
+    overflow: hidden;
+    position: relative;
+    flex: 1;
+    height: 60px;
+    background: #eaf4fd;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    min-width: 300px;
+  }
+
+  .carousel-track {
+    display: flex;
+    animation: scroll 50s linear infinite;
+  }
+
+  .carousel:hover .carousel-track {
+    animation-play-state: paused;
+  }
+
+  .carousel-item {
+    flex: 0 0 auto;
+    min-width: 280px;
+    text-align: center;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    color: #1c6ca1;
+    font-size: 1.1rem;
+  }
+
+  .disclaimer {
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 0.5rem;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+</style>
 </head>
 <body>
     <header>
+        <img src="Images/Logo.png" alt="Alabasteria Cleaning Services Logo" class="logo">
         <div class="header-content">
-            <img src="Images/Logo.png" alt="Alabasteria Cleaning Services Logo" class="logo">
             <div class="title-text">
                 <h1>Alabasteria Cleaning Services</h1>
                 <p>Your trusted partner for spotless spaces</p>
@@ -130,7 +221,49 @@
         <a href="#services">Services</a>
         <a href="contact.html">Contact</a>
     </nav>
+    <section class="carousel-section">
+  <div class="carousel-wrapper">
+    <span class="carousel-heading">Companies We've Serviced:</span>
+    <div class="carousel" aria-label="Companies we have serviced">
+      <div class="carousel-track">
+        <div class="carousel-item">🏋️ Cameron Family YMCA</div>
+        <div class="carousel-item">🏗️ Westside Building Material</div>
+        <div class="carousel-item">⛪ Reformation Lutheran Church</div>
+        <div class="carousel-item">🎒 SD Cooperative Charter School</div>
+        <div class="carousel-item">🚗 Bob Stall Chevrolet</div>
+        <div class="carousel-item">🏌️ PXG Golf Extreme</div>
+        <div class="carousel-item">🐜 Purcor Pest Solutions</div>
+        <div class="carousel-item">🏢 Mitsubishi Elevators & Escalators</div>
+      </div>
+    </div>
+  </div>
+  <p class="disclaimer">*These services were performed as an independent contractor through City Wide Facility Solutions.</p>
+</section>
     <div class="container">
+        <section>
+            <h2>Welcome to Alabasteria Cleaning Services</h2>
+            <p>
+                We are dedicated to providing top-notch cleaning services tailored to your needs. Whether it's your home or office, we ensure a clean and healthy environment.
+            </p>
+        </section>
+    
+
+        <section>
+  <h2>Our Commitment to Quality</h2>
+  <p>
+      At Alabasteria Cleaning Services, we pride ourselves on delivering the highest quality cleaning services. Our team is trained to use the best practices and eco-friendly products to ensure your space is not only clean but also safe for you and your family.
+  </p>
+</section>
+        <section>
+            <h2>Why Choose Us?</h2>
+            <ul>
+                <li>Experienced and professional staff</li>
+                <li>Eco-friendly cleaning products</li>
+                <li>Flexible scheduling options</li>
+                <li>100% satisfaction guarantee</li>
+            </ul>
+        </section>
+
         <section id="about">
             <h2>About Us</h2>
             <p>
