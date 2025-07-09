@@ -37,6 +37,7 @@
             border-radius: 8px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
         }
+
         h1, h2 {
             margin-top: 0;
         }
@@ -134,7 +135,7 @@
             }
         }
         .carousel-section {
-    margin: 1rem auto;
+    /* margin: 1rem auto; */
     padding: 0 1rem;
   }
 
@@ -197,30 +198,168 @@
       transform: translateX(-50%);
     }
   }
+
+  header a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+
+  header a:hover {
+    color: #000000;
+  }
+
+  .btn {
+    background-color: #ffffff;
+    color: #2d8fdd;
+    border-radius: 4px;
+    padding: 5px 10px;
+    display: inline-block;
+    transition: background-color 0.2s, color 0.2s;
+  }
+
+  .btn:hover {
+    background-color: #000000;
+    color: #ffffff;
+  }
+
+  header ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+
+  nav li {
+    list-style: none;
+    margin: 0 1em;
+    position: relative;
+  }
+  .nav li a {
+    padding: 20px;
+  }
+
+.navToggler, .navTogglerMenu {
+    display: none;
+}
+
+@media only screen and (max-width: 767px) {
+  header nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 300px;
+    height: 100%;
+    background: #1c6ca1;
+    display: block;
+    transition: right 0.3s ease;
+    z-index: 999;
+  }
+
+  .navToggler:checked ~ nav {
+    right: 0;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 2rem 1rem;
+    background: none;
+    border: none;
+  }
+
+  header nav li {
+    width: 100%;
+    text-align: left;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    margin: 0;
+    padding: 0;
+  }
+
+  header nav a {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    color: #fff;
+  }
+
+  header .btn {
+    width: 100%;
+    border-radius: 0;
+    padding: 1rem;
+  }
+
+  .navToggler, .navTogglerMenu {
+    display: block;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1000;
+  }
+
+  .navTogglerMenu img {
+    width: 30px;
+  }
+
+  .menuClose {
+    display: none;
+  }
+
+  .navToggler:checked ~ .navTogglerMenu .menuOpen {
+    display: none;
+  }
+
+  .navToggler:checked ~ .navTogglerMenu .menuClose {
+    display: inline-block;
+  }
+  .navToggler {
+  position: absolute;
+  left: -9999px; /* Hide off-screen */
+}
+.navTogglerMenu img {
+  filter: brightness(0) invert(1);
+}
+}
+body.menu-open {
+  overflow: hidden;
+}
 </style>
 </head>
 <body>
     <header>
-        <img src="Images/Logo.png" alt="Alabasteria Cleaning Services Logo" class="logo">
-        <div class="header-content">
-            <div class="title-text">
-                <h1>Alabasteria Cleaning Services</h1>
-                <p>Your trusted partner for spotless spaces</p>
-                <a href="contact.html" class="hours-link">
-                    <div class="hours-box">
-                        🕒 <strong>Hours:</strong> Mon–Fri 8am–6pm | Sat Closed | Sun 9am–1pm<br>
-                        <span class="subtext">For Commercial Cleaning Consultations</span>
-                    </div>
-                </a>
+        <div class="container2">
+            <img src="Images/Logo.png" alt="Alabasteria Cleaning Services Logo" class="logo">
+            <div class="header-content">
+                <div class="title-text">
+                    <h1>Alabasteria Cleaning Services</h1>
+                    <p>Your trusted partner for spotless spaces</p>
+                    <a href="contact.html" class="hours-link">
+                        <div class="hours-box">
+                            🕒 <strong>Hours:</strong> Mon–Fri 8am–6pm | Sat Closed | Sun 9am–1pm<br>
+                            <span class="subtext">For Commercial Cleaning Consultations</span>
+                        </div>
+                    </a>
+                </div>
             </div>
-        </div>
+            <input type="checkbox" id="navToggler" class="navToggler">
+            <nav>
+                <ul>
+                    <li><a href="#index">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="contact.html" class="btn">Contact Us</a></li>
+                </ul>
+            </nav>
+            <label for="navToggler" class="navTogglerMenu" name="navToggler">
+                <img src="Images/menu.svg" class="menuOpen" alt="menu">
+                <img src="Images/x.svg" class="menuClose" alt="close">
+            </label>
+        </div>    
     </header>
-    <nav>
-        <a href="#index">Home</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+    
+    <!-- Carousel Section -->
     <section class="carousel-section">
   <div class="carousel-wrapper">
     <span class="carousel-heading">Companies We've Serviced:</span>
