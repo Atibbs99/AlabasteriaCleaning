@@ -621,6 +621,10 @@ nav li {
 .carousel-section {
   padding-top: 5px;
 }
+.services-highlight {
+  color: #1c6ca1;
+  font-size: 1.5rem;
+}
 }
 
 @media only screen and (max-width: 430px) {
@@ -702,3 +706,147 @@ body.menu-open {
       border-radius: 8px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     }
+
+/* SERVICES PAGE STYLES */
+/* Add your CSS rules for .services-page and related elements below, for example: */
+
+/* .services-page {
+  max-width: 900px;
+  margin: 2rem auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+} */
+
+.services-intro {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.service-category {
+  margin-bottom: 2rem;
+}
+
+.service-category h2 {
+  color: #1c6ca1;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.service-category ul {
+  list-style: none;
+  padding: 0;
+}
+
+.service-category ul li {
+  font-size: 1.1rem;
+  padding-left: 1.5rem;
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+
+.service-category ul li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #1c6ca1;
+  font-weight: bold;
+}
+
+.quote-cta {
+  display: inline-block;
+  margin-top: 2rem;
+  color: #1c6ca1;
+  font-weight: bold;
+  text-decoration: none;
+  border-bottom: 2px solid #1c6ca1;
+  padding-bottom: 2px;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.quote-cta:hover {
+  color: #15527d;
+  border-color: #15527d;
+}
+
+.services-highlight {
+  color: #1c6ca1;
+  font-size: xxx-large;
+}
+
+.mini-guarantee {
+  background-color: #f8f9fa;
+  padding: 2rem 2rem 3rem;
+  text-align: center;
+  border-radius: 8px;
+  margin-top: 3rem;
+}
+
+.mini-guarantee h3 {
+  font-size: 2rem;
+  color: #1c6ca1;
+  margin-bottom: 1rem;
+}
+
+.mini-guarantee p {
+  max-width: 600px;
+  margin: 0 auto 1rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.why-us-link {
+  font-weight: bold;
+  color: #1c6ca1;
+  text-decoration: none;
+  border-bottom: 2px solid #1c6ca1;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.why-us-link:hover {
+  color: #021b42;
+  border-color: gold;
+}
+
+.quote-cta {
+  display: inline-block;
+  margin-top: 2rem;
+  color: #1c6ca1;
+  font-weight: bold;
+  text-decoration: none;
+  border-bottom: 2px solid #1c6ca1;
+  padding-bottom: 2px;
+  position: relative;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.quote-cta::after {
+  content: "→";
+  position: absolute;
+  right: -1.5rem;
+  transition: right 0.3s ease;
+}
+
+.quote-cta:hover::after {
+  right: -2rem;
+}
+
+.quote-cta:hover {
+  color: #15527d;
+  border-color: gold;
+}
+
+.why-us-link {
+  font-weight: bold;
+  color: #1c6ca1;
+  text-decoration: none;
+  border-bottom: 2px solid #1c6ca1;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.why-us-link:hover {
+  color: #15527d;
+  border-color: gold;
+}
