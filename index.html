@@ -461,7 +461,33 @@ section ul li::before {
   margin: 0 0 1rem;
   padding-left: 1rem;
 }
+.contact-cta {
+  display: inline-block;
+  margin-top: 2rem;
+  color: #1c6ca1;
+  font-weight: bold;
+  text-decoration: none;
+  border-bottom: 2px solid #1c6ca1;
+  padding-bottom: 2px;
+  transition: color 0.3s ease, border-color 0.3s ease;
+  position: relative;
+}
 
+.contact-cta::after {
+  content: "→";
+  position: absolute;
+  right: -1.5rem;
+  transition: right 0.3s ease;
+}
+
+.contact-cta:hover::after {
+  right: -2rem;
+}
+
+.contact-cta:hover {
+  color: #15527d;
+  border-color: #15527d;
+}
   /* HEADER STYLES */
   header a {
     text-decoration: none;
@@ -787,6 +813,7 @@ body.menu-open {
     Email: <a href="mailto:alabasteriallc@gmail.com">alabasteriallc@gmail.com</a><br>
     Phone: (619) 874-1093
   </p>
+  <a href="contact.html" class="contact-cta">Schedule An Appointment Now</a>
 </section>
 <section class="testimonials">
   <h2>WHAT'S THE WORD?</h2>
