@@ -15,7 +15,7 @@
         header {
             background: #2d8fdd;
             color: #fff;
-            padding: 1.5rem 0;
+            padding: 1.5rem 0 0;
             text-align: center;
         }
         nav {
@@ -104,36 +104,7 @@
             }
 
         
-        @media (max-width: 600px) {
-            .header-content {
-                flex-direction: column;
-            }
-            .title-text {
-                text-align: center;
-            }
-        .logo {
-                display: none; /* Hide logo on smaller screens */
-            }    
-        }
 
-        @media (max-width: 1705px) {
-            .logo {
-                width: 180px; /* Adjust logo size for smaller screens */
-                left: 300px; /* Adjust position for smaller screens */
-            }
-        }
-
-        @media (max-width: 1440px) {
-            .logo {
-                display: none; /* Hide logo on smaller screens */
-            }
-        }
-
-        @media (min-width: 1846px) {
-            .logo {
-                display: none;
-            }
-        }
         .carousel-section {
     /* margin: 1rem auto; */
     padding: 0 1rem;
@@ -189,7 +160,65 @@
     color: #666;
     margin-top: 0.5rem;
   }
+/* HERO SECTION STYLES */
+.hero {
+  position: relative;
+  height: 100vh;
+  background: url('https://images.unsplash.com/photo-1627905646269-7f034dcc5738?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&dl=towfiqu-barbhuiya--9gPKrsbGmc-unsplash.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #ffffff;
+}
 
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4); /* Dark overlay for readability */
+}
+
+.hero-content {
+  position: relative;
+  max-width: 800px;
+  padding: 2rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.cta-btn {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  background-color: #1c6ca1;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: #15527d;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
   @keyframes scroll {
     0% {
       transform: translateX(0);
@@ -198,7 +227,242 @@
       transform: translateX(-50%);
     }
   }
+/* WELCOME SECTION STYLES */
+.welcome {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: #f8f9fa; /* Light neutral background */
+  color: #333;
+}
 
+.welcome h2 {
+  font-size: 2.5rem;
+  color: #1c6ca1; /* Same blue as your brand/button */
+  margin-bottom: 1rem;
+}
+
+.welcome p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+.welcome::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #1c6ca1;
+  margin: 2rem auto 0;
+  border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+  .welcome h2 {
+    font-size: 2rem;
+  }
+
+  .welcome p {
+    font-size: 1rem;
+  }
+}
+
+/* SHARED STYLES FOR MAIN SECTIONS */
+section {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+section h2 {
+  font-size: 2.5rem;
+  color: #1c6ca1;
+  margin-bottom: 1rem;
+}
+
+section p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+section ul {
+  list-style: none;
+  padding: 0;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+section ul li {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+section ul li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #1c6ca1;
+  font-weight: bold;
+}
+
+/* ALTERNATE BACKGROUNDS FOR VARIETY */
+.commitment {
+  background-color: #f8f9fa;
+}
+
+.why-choose {
+  background-color: #ffffff;
+}
+
+.about {
+  background-color: #f8f9fa;
+}
+
+.services {
+  background-color: #ffffff;
+}
+
+.contact {
+  background-color: #f8f9fa;
+}
+/* WHY CHOOSE US — keeps the checkmarks */
+.why-choose ul li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #1c6ca1;
+  font-weight: bold;
+}
+
+/* WHY CHOOSE US — keeps left padding for the icon */
+.why-choose ul li {
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+/* SERVICES — same checkmark style */
+.services-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #1c6ca1;
+  font-weight: bold;
+}
+
+/* SERVICES — add left padding for icon space too */
+.services-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  section h2 {
+    font-size: 2rem;
+  }
+
+  section p,
+  section ul li {
+    font-size: 1rem;
+  }
+}
+.testimonials {
+  background-color: #f8f9fa;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 2.5rem;
+  color: #1c6ca1;
+  margin-bottom: 2rem;
+}
+
+.testimonial-slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 2rem;
+  padding-bottom: 1rem;
+}
+
+.testimonial {
+  flex: 0 0 300px;
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  scroll-snap-align: start;
+}
+
+.testimonial p {
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.testimonial h4 {
+  font-weight: bold;
+  color: #1c6ca1;
+  margin-bottom: 0.25rem;
+}
+
+.testimonial .date {
+  font-size: 0.85rem;
+  color: #555;
+}
+.faq {
+  padding: 4rem 2rem;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.faq h2 {
+  font-size: 2.5rem;
+  color: #1c6ca1;
+  margin-bottom: 2rem;
+}
+
+.accordion {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.accordion-item {
+  border-bottom: 1px solid #ddd;
+}
+
+.accordion-header {
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  padding: 1rem 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: #1c6ca1;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.accordion-content p {
+  margin: 0 0 1rem;
+  padding-left: 1rem;
+}
+
+  /* HEADER STYLES */
   header a {
     text-decoration: none;
     color: #ffffff;
@@ -321,7 +585,87 @@
 .navTogglerMenu img {
   filter: brightness(0) invert(1);
 }
+.title-text {
+  padding-top: 1rem;
 }
+.carousel-heading {
+  position: absolute;
+  left: 7rem;
+  top: 19.7rem;
+  font-size: smaller;
+  font-weight: bold;
+  color: #000000;
+  z-index: 2;
+}
+.carousel-section {
+  padding-top: 5px;
+}
+}
+
+@media only screen and (max-width: 430px) {
+  .carousel-heading {
+    left: 8rem;
+    top: 19.7rem;
+    font-size: smaller;
+  }
+  .carousel-item {
+    min-width: 200px; /* Adjust for smaller screens */
+    font-size: 0.9rem; /* Slightly smaller text */
+  }
+}
+@media only screen and (max-width: 376px) {
+  .carousel-heading {
+    left: 7.5rem;
+    top: 19.7rem;
+    font-size: x-small;
+  }
+  .carousel-item {
+    min-width: 180px; /* Further adjust for very small screens */
+    font-size: 0.8rem; /* Even smaller text */
+  }
+}
+@media only screen and (max-width: 603px) {
+  .carousel-heading {
+    left: 1.5rem;
+    top: 19.7rem;
+    font-size: x-small;
+  }
+  .carousel-item {
+    min-width: 180px; /* Further adjust for very small screens */
+    font-size: 0.8rem; /* Even smaller text */
+  }
+}
+  @media (max-width: 600px) {
+    .header-content {
+      flex-direction: column;
+    }
+    .title-text {
+      text-align: center;
+    }
+    .logo {
+      display: none; /* Hide logo on smaller screens */
+    }    
+    }
+
+  @media (max-width: 1705px) {
+    .logo {
+      width: 180px; /* Adjust logo size for smaller screens */
+      left: 300px; /* Adjust position for smaller screens */
+            }
+            
+        }
+
+        @media (max-width: 1440px) {
+            .logo {
+                display: none; /* Hide logo on smaller screens */
+            }
+        }
+
+        @media (min-width: 1846px) {
+            .logo {
+                display: none;
+            }
+        }
 body.menu-open {
   overflow: hidden;
 }
@@ -379,57 +723,163 @@ body.menu-open {
   <p class="disclaimer">*These services were performed as an independent contractor through City Wide Facility Solutions.</p>
 </section>
     <div class="container">
-        <section>
-            <h2>Welcome to Alabasteria Cleaning Services</h2>
-            <p>
-                We are dedicated to providing top-notch cleaning services tailored to your needs. Whether it's your home or office, we ensure a clean and healthy environment.
-            </p>
+        <section class="welcome">
+          <h2>Welcome to Alabasteria Cleaning Services</h2>
+          <p>
+            We are dedicated to providing top-notch cleaning services tailored to your needs. Whether it's your home or office, we ensure a clean and healthy environment.
+          </p>
         </section>
+        <!-- HERO SECTION -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>A Cleaner Space, A Brighter Day</h1>
+    <p>Professional commercial cleaning done with care — so you can focus on what matters.</p>
+    <a href="contact.html" class="cta-btn">Get a Free Quote</a>
+  </div>
+</section>
     
 
-        <section>
+<!-- OUR COMMITMENT TO QUALITY -->
+<section class="commitment">
   <h2>Our Commitment to Quality</h2>
   <p>
-      At Alabasteria Cleaning Services, we pride ourselves on delivering the highest quality cleaning services. Our team is trained to use the best practices and eco-friendly products to ensure your space is not only clean but also safe for you and your family.
+    At Alabasteria Cleaning Services, quality means more than just spotless spaces — it’s about care, consistency, and service that speaks for itself. As a family-run business, we draw from years of experience and a deep commitment to doing things right, every single time.
   </p>
 </section>
-        <section>
-            <h2>Why Choose Us?</h2>
-            <ul>
-                <li>Experienced and professional staff</li>
-                <li>Eco-friendly cleaning products</li>
-                <li>Flexible scheduling options</li>
-                <li>100% satisfaction guarantee</li>
-            </ul>
-        </section>
 
-        <section id="about">
-            <h2>About Us</h2>
-            <p>
-                Alabasteria Cleaning Services provides professional, reliable, and affordable cleaning solutions for homes and businesses. Our experienced team is dedicated to delivering sparkling results every time.
-            </p>
-        </section>
-        <section id="services">
-            <h2>Our Services</h2>
-            <ul class="services-list">
-                <li>Residential Cleaning</li>
-                <li>Commercial Cleaning</li>
-                <li>Deep Cleaning</li>
-                <li>Move-In/Move-Out Cleaning</li>
-                <li>Carpet & Upholstery Cleaning</li>
-            </ul>
-        </section>
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <p>
-                Email: <a href="mailto:info@alabasteriacleaning.com">info@alabasteriacleaning.com</a><br>
-                Phone: (123) 456-7890
-            </p>
-        </section>
+<!-- WHY CHOOSE US -->
+<section class="why-choose">
+  <h2>Why Choose Us?</h2>
+  <ul>
+    <li>Experienced and professional staff</li>
+    <li>Eco-friendly cleaning products</li>
+    <li>Flexible scheduling options</li>
+    <li>100% satisfaction guarantee</li>
+    <li>Family owned & operated</li>
+    <li>Trusted and reliable service</li>
+  </ul>
+</section>
+
+<!-- ABOUT US -->
+<section class="about">
+  <h2>About Us</h2>
+  <p>
+    Founded in 2024, Alabasteria Cleaning Services is a family-run company with deep roots in the cleaning industry. Inspired by our mother’s dedication and honest work, we built this business to deliver reliable, caring service for every client — whether we’re cleaning an office, a school, or a retail space. Our mission is simple: to create cleaner, healthier, more welcoming spaces for the people who use them every day.
+  </p>
+</section>
+
+<!-- OUR SERVICES -->
+<section class="services">
+  <h2>Our Services</h2>
+  <ul class="services-list">
+    <li>Residential Cleaning</li>
+    <li>Commercial Cleaning</li>
+    <li>Deep Cleaning</li>
+    <li>Move-In/Move-Out Cleaning</li>
+    <li>Carpet & Upholstery Cleaning</li>
+  </ul>
+</section>
+
+<!-- CONTACT US -->
+<section class="contact">
+  <h2>Contact Us</h2>
+  <p>
+    Email: <a href="mailto:alabasteriallc@gmail.com">alabasteriallc@gmail.com</a><br>
+    Phone: (619) 874-1093
+  </p>
+</section>
+<section class="testimonials">
+  <h2>WHAT'S THE WORD?</h2>
+  <div class="testimonial-slider">
+    <div class="testimonial">
+      <p>“Thank you so much for stepping in to help with Reformation Lutheran Church. You guys are the best!”</p>
+      <h4>Tracy, Facility Manager</h4>
+      <span class="date">Sep 16, 2024</span>
+    </div>
+    <div class="testimonial">
+      <p>“We’re really happy with your services. The only note was to use the right trash bags for the small cans we provided. Great job overall!”</p>
+      <h4>Facility Manager, Purcor Pest Solutions</h4>
+      <span class="date">Nov 4, 2024</span>
+    </div>
+    <div class="testimonial">
+      <p>“You guys are doing such a great job — I’m excited to keep working with you! I’d love to give you gift cards for going above and beyond. That kind of work ethic and positive attitude is exactly what I look for!”</p>
+      <h4>Facility Manager, San Diego Cooperative Charter School</h4>
+      <span class="date">Nov 27, 2024</span>
+    </div>
+    <div class="testimonial">
+      <p>“Customer service! You guys are great with client relations and service. I appreciate you!”</p>
+      <h4>Tracy, Facility Manager</h4>
+      <span class="date">Dec 2, 2024</span>
+    </div>
+    <div class="testimonial">
+      <p>“We’re really happy with the extra detailing work. It made a big impact on the overall look of the facilities. Great job!”</p>
+      <h4>Facility Manager, Reformation Lutheran Church & School</h4>
+      <span class="date">Dec 10, 2024</span>
+    </div>
+    <div class="testimonial">
+      <p>“The team did an amazing job! We’re definitely motivated to keep working with you. We really appreciate all you did — and the communication is top-notch. That’s what we look for!”</p>
+      <h4>Facility Solutions Manager, Cameron Family YMCA</h4>
+      <span class="date">May 29, 2025</span>
+    </div>
+    <div class="testimonial">
+      <p>“I really appreciate the help with the move-out cleaning. I’m not young enough to do all that myself anymore, but the guy who came was awesome! He used the time efficiently — something I’ve noticed other companies don’t always do — and he clearly knew what he was doing. Definitely working with them again!”</p>
+      <h4>Jerry, Client</h4>
+      <span class="date">June 4, 2025</span>
+    </div>
+  </div>
+</section>
+<section class="faq">
+  <h2>Frequently Asked Questions</h2>
+  <div class="accordion">
+    <div class="accordion-item">
+      <button class="accordion-header">What areas do you serve?</button>
+      <div class="accordion-content">
+        <p>We provide cleaning services throughout San Diego, CA. Contact us to see if we cover your area!</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button class="accordion-header">Do you use eco-friendly products?</button>
+      <div class="accordion-content">
+        <p>Yes! We prioritize non-toxic, eco-friendly cleaning products to keep your space safe and healthy.</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button class="accordion-header">Can I schedule a one-time or recurring service?</button>
+      <div class="accordion-content">
+        <p>Absolutely — we offer flexible options to fit your needs, whether it’s a one-time deep clean or ongoing maintenance.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
     </div>
     <footer>
   &copy; 2024 Alabasteria Cleaning Services. All rights reserved.<br>
   <small>Hours: Mon–Fri 8am–6pm | Sat Closed | Sun 9am-1pm</small>
 </footer>
+
+<script>
+  const headers = document.querySelectorAll('.accordion-header');
+
+  headers.forEach(header => {
+    header.addEventListener('click', () => {
+      const openItem = document.querySelector('.accordion-content.show');
+      const content = header.nextElementSibling;
+
+      if (openItem && openItem !== content) {
+        openItem.style.maxHeight = null;
+        openItem.classList.remove('show');
+      }
+
+      if (content.classList.contains('show')) {
+        content.style.maxHeight = null;
+        content.classList.remove('show');
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+        content.classList.add('show');
+      }
+    });
+  });
+</script>
 </body>
 </html>
