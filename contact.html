@@ -4,59 +4,63 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact Us – Alabasteria Cleaning Services</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #f7f7f7;
-      color: #222;
-    }
-    header {
-      background: #2d8fdd;
-      color: #fff;
-      padding: 1.5rem 0;
-      text-align: center;
-    }
-    nav {
-      background: #1c6ca1;
-      padding: 0.5rem 0;
-      text-align: center;
-    }
-    nav a {
-      color: #fff;
-      margin: 0 1rem;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .iframe-wrapper {
-      max-width: 900px;
-      margin: 2rem auto;
-      background: #fff;
-      padding: 2rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    }
-    footer {
-      background: #2d8fdd;
-      color: #fff;
-      text-align: center;
-      padding: 1rem 0;
-      margin-top: 2rem;
-    }
-
-  </style>
+  <link rel="icon" href="Images/Logo-3.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header>
-    <h1>Alabasteria Cleaning Services</h1>
-    <p>Your trusted partner for spotless spaces</p>
-  </header>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="index.html#about">About</a>
-    <a href="index.html#services">Services</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+      <div class="container2">
+        <img src="Images/Logo.png" alt="Alabasteria Cleaning Services Logo" class="logo">
+        <div class="header-content">
+        <div class="title-text">
+          <h1>Alabasteria Cleaning Services</h1>
+            <p>Your trusted partner for spotless spaces</p>
+          <div class="location">
+            📍 San Diego, CA
+          </div>
+            <a href="contact.html" class="hours-link">
+          <div class="hours-box">
+            🕒 <strong>Hours:</strong> Mon–Fri 8am–6pm | Sat Closed | Sun 9am–1pm<br>
+            <span class="subtext">For Commercial Cleaning Consultations</span>
+          </div>
+          </a>
+        </div>
+        </div>
+        <input type="checkbox" id="navToggler" class="navToggler">
+          <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact" class="btn">Contact Us</a></li>
+            </ul>
+          </nav>
+            <label for="navToggler" class="navTogglerMenu" name="navToggler">
+                <img src="Images/menu.svg" class="menuOpen" alt="menu">
+                <img src="Images/x.svg" class="menuClose" alt="close">
+            </label>
+      </div>    
+    </header>
+    
+    <!-- Carousel Section -->
+  <section class="carousel-section">
+  <div class="carousel-wrapper">
+    <span class="carousel-heading">Companies We've Serviced:</span>
+    <div class="carousel" aria-label="Companies we have serviced">
+      <div class="carousel-track">
+        <div class="carousel-item">🏋️ Cameron Family YMCA</div>
+        <div class="carousel-item">🏗️ Westside Building Material</div>
+        <div class="carousel-item">⛪ Reformation Lutheran Church</div>
+        <div class="carousel-item">🎒 SD Cooperative Charter School</div>
+        <div class="carousel-item">🚗 Bob Stall Chevrolet</div>
+        <div class="carousel-item">🏌️ PXG Golf Extreme</div>
+        <div class="carousel-item">🐜 Purcor Pest Solutions</div>
+        <div class="carousel-item">🏢 Mitsubishi Elevators & Escalators</div>
+      </div>
+    </div>
+  </div>
+  <p class="disclaimer">*These services were performed as an independent contractor through City Wide Facility Solutions.</p>
+</section>
 
   <div class="iframe-wrapper">
     <iframe
