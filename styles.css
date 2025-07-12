@@ -850,3 +850,97 @@ body.menu-open {
   color: #15527d;
   border-color: gold;
 }
+
+.why-choose-us {
+  padding: 4rem 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.why-choose-us h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #1c6ca1;
+  margin-bottom: 2rem;
+}
+
+.why-choose-us h2 {
+  font-size: 2rem;
+  color: #1c6ca1;
+  margin: 2rem 0 1rem;
+  text-align: center;
+}
+
+.why-choose-us p {
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+  font-size: 1.1rem;
+}
+
+.why-choose-us ul {
+  list-style: none;
+  padding: 0;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+
+.why-choose-us ul li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.why-choose-us ul li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #1c6ca1;
+  font-weight: bold;
+}
+
+.why-choose-us .slogan {
+  text-align: center;
+  font-size: 1.3rem;
+  color: #1c6ca1;
+  margin: 2rem 0;
+}
+
+.quote-cta {
+  display: inline-block;
+  color: #1c6ca1;
+  font-weight: bold;
+  text-decoration: none;
+  border-bottom: 2px solid #1c6ca1;
+  padding-bottom: 2px;
+  position: relative;
+  transition: color 0.3s ease, border-color 0.3s ease;
+  text-align: center;
+}
+
+.quote-cta::after {
+  content: "→";
+  position: absolute;
+  right: -1.5rem;
+  transition: right 0.3s ease;
+}
+
+.quote-cta:hover::after {
+  right: -2rem;
+}
+
+.quote-cta:hover {
+  color: #15527d;
+  border-color: gold;
+}
+
+.why-choose-us .quote-cta {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.why-us-contact {
+  text-align: right;
+  margin-top: 2rem;
+}
