@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Work | Alabasteria Cleaning Services</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css" />
+  <style>
+    .our-work-page {
+      max-width: 1200px;
+      margin: 4rem auto;
+      padding: 0 2rem;
+    }
+
+    .our-work-page h1 {
+      font-size: 2rem;
+      color: #1c6ca1;
+      margin-bottom: 1rem;
+    }
+
+    .our-work-page h2 {
+      font-size: 1.5rem;
+      margin-top: 3rem;
+      color: #1c6ca1;
+    }
+
+    .splide {
+      margin-top: 1rem;
+    }
+
+    .splide__slide img, .splide__slide video {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .back-links {
+      margin-top: 3rem;
+      text-align: center;
+    }
+
+    .back-links a {
+      display: inline-block;
+      margin: 0 1rem;
+      color: #1c6ca1;
+      text-decoration: underline;
+      transition: transform 0.3s ease;
+    }
+
+    .back-links a:hover {
+      transform: translateX(5px);
+    }
+  </style>
+</head>
+
+<body>
+    <header>
+      <div class="container2">
+        <img src="Images/Logo.png" alt="Alabasteria Cleaning Services Logo" class="logo">
+  
+        <div class="header-content">
+        <div class="title-text">
+          <h1>Alabasteria Cleaning Services</h1>
+            <p>Your trusted partner for spotless spaces</p>
+          <div class="location">
+            📍 San Diego, CA
+          </div>
+            <a href="contact.html" class="hours-link">
+          <div class="hours-box">
+            🕒 <strong>Hours:</strong> Mon–Fri 8am–6pm | Sat Closed | Sun 9am–1pm<br>
+            <span class="subtext">For Commercial Cleaning Consultations</span>
+          </div>
+          </a>
+        </div>
+        </div>
+        <input type="checkbox" id="navToggler" class="navToggler">
+          <nav>
+            <ul>
+                <li><a href="#index">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="why.html">Why Us?</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html" class="btn">Contact Us</a></li>
+            </ul>
+          </nav>
+            <label for="navToggler" class="navTogglerMenu" name="navToggler">
+                <img src="Images/menu.svg" class="menuOpen" alt="menu">
+                <img src="Images/x.svg" class="menuClose" alt="close">
+            </label>
+      </div>    
+    </header>
+
+  <main class="our-work-page">
+    <h1>Our Work</h1>
+    <p>Here’s a look at some of the spaces we proudly care for, starting with Bob Stall Chevrolet.</p>
+
+    <h2>Bob Stall Chevrolet</h2>
+
+    <div id="bobstall-carousel" class="splide vertical-videos">
+    <div class="splide__track">
+        <ul class="splide__list">
+        <li class="splide__slide">
+            <video controls playsinline>
+            <source src="videos/Video Showing Cleaned Bathrooms.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+            </video>
+        </li>
+        <li class="splide__slide">
+            <video controls playsinline>
+            <source src="videos/Video Showing Sales Area Spotless - Bob Stall Chevrolet.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+            </video>
+        </li>
+        <li class="splide__slide">
+            <video controls playsinline>
+            <source src="videos/Video Showing the Customer Services Area - Bob Stall.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+            </video>
+        </li>
+        <li class="splide__slide">
+            <video controls playsinline>
+            <source src="videos/Video Showing the Offices Area Cleaned - Bob Stall Chevrolet.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+            </video>
+        </li>
+        <li class="splide__slide">
+            <video controls playsinline>
+            <source src="videos/Video showing the waiting area.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+            </video>
+        </li>
+        <!-- Add more video slides here -->
+        </ul>
+    </div>
+</div>
+<div class="more-coming">
+  <p>More videos & photos coming up — stay tuned! 📸✨</p>
+</div>
+
+    <div class="back-links">
+      <a href="#">Back to Top ↑</a>
+      <a href="index.html">Back to Home →</a>
+    </div>
+  </main>
+
+  <footer>
+  &copy; 2025 Alabasteria Cleaning Services. All rights reserved.<br>
+  <small>Hours: Mon–Fri 8am–6pm | Sat Closed | Sun 9am-1pm</small><br>
+  <a href="privacy.html">Privacy Policy</a> 
+</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var splide = new Splide('#bobstall-carousel', {
+      type: 'loop',
+      autoplay: false, // Autoplay for slides is fine but not for video
+      interval: 5000,
+      pauseOnHover: true,
+      arrows: true,
+      pagination: true,
+    });
+
+    splide.on('move', function () {
+      // Pause all videos when slide changes
+      var videos = document.querySelectorAll('#bobstall-carousel video');
+      videos.forEach(function (video) {
+        if (!video.paused) {
+          video.pause();
+        }
+      });
+    });
+
+    splide.mount();
+
+    // Optional: Smooth back to top
+    const backToTop = document.querySelector('.back-links a[href="#"]');
+    backToTop.addEventListener('click', function (e) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+</script>
+
+</body>
+</html>
