@@ -1,142 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TNQW6LRN');</script>
+  <!-- End Google Tag Manager -->
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-2Y312FEV8K"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2Y312FEV8K"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'G-2Y312FEV8K');
-</script>
+    gtag('config', 'G-2Y312FEV8K');
+  </script>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Read Alabasteria Cleaning Services' privacy policy. We respect your data and keep your information secure." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Privacy Policy | Alabasteria Cleaning Services</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Read Alabasteria Cleaning Services' privacy policy to learn how we handle website inquiries, analytics, and your contact information." />
+  <link rel="icon" href="Images/Logo-3.ico" type="image/x-icon">
   <style>
-    /* Privacy Policy specific styling */
-    .privacy-policy {
-      max-width: 900px;
-      margin: 4rem auto;
-      padding: 2rem;
-      background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    :root {
+      --paper: #f8f6f0;
+      --surface: #ffffff;
+      --ink: #182c2a;
+      --muted: #40534f;
+      --dark: #153c36;
+      --accent: #e5cc99;
+      --tint: #e6eee7;
+      --line: #c9d5ce;
     }
-
-    .privacy-policy h1 {
-      color: #1c6ca1;
-      font-size: 2rem;
-      margin-bottom: 1rem;
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font: 1rem/1.7 system-ui, sans-serif;
     }
-
-    .privacy-policy h2 {
-      font-size: 1.5rem;
-      margin-top: 2rem;
-      color: #1c6ca1;
+    h1, h2, h3, p { margin: 0; }
+    h1, h2 {
+      font-family: Georgia, serif;
+      font-weight: 500;
+      line-height: 1.1;
+      letter-spacing: -.03em;
     }
+    h1 { font-size: clamp(2.25rem, 5vw, 3.6rem); }
+    h2 { font-size: clamp(1.45rem, 2.8vw, 1.95rem); margin-top: 2.25rem; margin-bottom: .65rem; color: var(--dark); }
+    a { color: inherit; text-underline-offset: .22em; }
+    a:focus-visible { outline: 3px solid currentColor; outline-offset: 4px; }
+    .wrap { width: min(72rem, calc(100% - 3rem)); margin-inline: auto; }
+    .skip { position: absolute; z-index: 1; background: var(--surface); padding: .5rem 1rem; transform: translateY(-110%); }
+    .skip:focus { transform: translateY(0); }
 
-    .privacy-policy p {
-      line-height: 1.7;
-      margin: 1rem 0;
-      color: #333;
+    /* Header */
+    .site-header { background: var(--paper); border-bottom: 1px solid var(--line); }
+    .header-inner, nav, .footer {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
     }
-
-    .privacy-policy ul {
-      margin: 1rem 0 1rem 1.5rem;
-      list-style: disc;
-      color: #333;
+    .header-inner, .footer { justify-content: space-between; gap: 1rem; }
+    .header-inner { padding-block: 1.15rem; }
+    .brand { display: grid; line-height: 1; text-decoration: none; }
+    .brand span { font: 1.9rem/1 Georgia, serif; }
+    .brand small { margin-top: .35rem; font-size: .79rem; text-transform: uppercase; letter-spacing: .13em; }
+    nav { gap: .45rem 1.4rem; }
+    nav a { font-weight: 600; text-decoration: none; }
+    nav a:hover { text-decoration: underline; }
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: .7rem 1.15rem;
+      border-radius: .35rem;
+      font-weight: 750;
+      text-decoration: none;
     }
+    .button-dark { background: var(--dark); color: var(--surface); }
 
-    .privacy-policy a {
-      color: #1c6ca1;
-      text-decoration: underline;
+    /* Policy Content */
+    .policy-hero { background: var(--dark); color: var(--surface); padding-block: clamp(2.5rem, 6vw, 4.5rem); }
+    .policy-hero p { color: var(--accent); font-weight: 600; margin-top: .75rem; }
+    .policy-wrap { padding-block: clamp(2.25rem, 5vw, 4rem); }
+    .policy-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: .55rem;
+      padding: clamp(1.5rem, 4vw, 3rem);
+      max-width: 54rem;
     }
+    .policy-card p { color: var(--muted); margin-bottom: 1rem; }
+    .policy-card ul { color: var(--muted); margin: .5rem 0 1.25rem 1.25rem; padding: 0; display: grid; gap: .45rem; }
+    .policy-card strong { color: var(--ink); }
+    .policy-card a { color: var(--dark); font-weight: 600; }
 
-    .privacy-policy a:hover {
-      color: #155a8a;
+    .footer { padding-block: 1.4rem; border-top: 1px solid var(--line); }
+
+    @media (max-width: 42rem) {
+      .wrap { width: calc(100% - 2rem); }
+      nav { column-gap: 1rem; }
     }
   </style>
+  <script id="vtag-ai-js" async src="https://r2.leadsy.ai/tag.js" data-pid="tVbFJaAp60kP2rGO" data-version="062024"></script>
 </head>
-
 <body>
-  <header>
-    <!-- Include your site header/nav here -->
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TNQW6LRN"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html" aria-label="Alabasteria Cleaning Services home">
+        <span>Alabasteria</span><small>Cleaning Services</small>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="why.html">Why Us?</a>
+        <a href="gallery.html">Gallery</a>
+        <a class="button button-dark" href="pricing.html">Get a Free Quote</a>
+      </nav>
+    </div>
   </header>
-<br>
-<div class="back-to-home">
-  <a href="index.html" class="btn-home">← Back to Home</a>
-</div>
-  <main class="privacy-policy">
-    <h1>Privacy Policy</h1>
-    <p><em>Last updated: July 2025</em></p>
 
-    <h2>Who We Are</h2>
-    <p>Our website address is: <a href="https://www.alabasteriacleaning.com">https://www.alabasteriacleaning.com</a>. Alabasteria Cleaning Services (“we”, “us”, or “our”) is committed to respecting your privacy and protecting any personal information you share through this website.</p>
+  <main id="main">
+    <section class="policy-hero">
+      <div class="wrap">
+        <h1>Privacy Policy</h1>
+        <p>Last updated: November 2026</p>
+      </div>
+    </section>
 
-    <h2>What Information We Collect and Why</h2>
+    <section class="wrap policy-wrap">
+      <div class="policy-card">
+        <h2 style="margin-top: 0;">Who We Are</h2>
+        <p>Alabasteria Cleaning Services, LLC (“we,” “us,” or “our”) operates <a href="https://www.alabasteriacleaning.com">alabasteriacleaning.com</a>. We are a San Diego–based commercial and residential cleaning company committed to respecting your privacy and protecting the personal information you share with us.</p>
 
-    <h3>Contact Forms & Comments</h3>
-    <p>When you fill out a form or leave a comment, we may collect your name, email, phone number, and any other info you provide. We also collect your IP address and browser details to help detect spam.</p>
-    <p>If you leave a comment, an anonymized string of your email address may be sent to the Gravatar service to check if you are using it. The Gravatar privacy policy is available <a href="https://automattic.com/privacy/">here</a>. After your comment is approved, your profile picture (if any) may be visible to the public alongside your comment.</p>
+        <h2>Information We Collect</h2>
+        <p>We only collect information needed to respond to your inquiries, schedule walkthroughs, and improve our website:</p>
+        <ul>
+          <li><strong>Quote &amp; Walkthrough Forms:</strong> When you request a quote or schedule a walkthrough, we collect the details you provide—such as your name, business name, email address, phone number, service address, preferred schedule, and cleaning notes.</li>
+          <li><strong>Direct Communications:</strong> If you call, text, or email us directly, we retain the information you share so we can follow up and provide service.</li>
+          <li><strong>Website Usage &amp; Analytics Data:</strong> We use cookies and tracking scripts to understand how visitors find and use our site (such as pages visited, browser type, and general location).</li>
+        </ul>
 
-    <h3>Media</h3>
-    <p>If you upload images to the website, please avoid including embedded location data (EXIF GPS). Visitors to the site can download and extract this data.</p>
+        <h2>How We Use Your Information</h2>
+        <ul>
+          <li>To respond to your quote requests, schedule walkthroughs, and deliver cleaning services.</li>
+          <li>To communicate with you regarding scheduling, updates, or customer support.</li>
+          <li>To monitor website performance, prevent spam, and improve our services.</li>
+        </ul>
 
-    <h3>Cookies</h3>
-    <p>If you leave a comment, you may opt-in to saving your name, email, and website in cookies for convenience. These cookies may last up to one year.</p>
-    <p>If you log in, we set temporary cookies to check if your browser accepts them. Login cookies last for two days. If you select “Remember Me,” your login persists for two weeks. Logging out removes these cookies. If you edit or publish an article, a cookie will save the post ID and expire after one day.</p>
+        <h2>Third-Party Services We Use</h2>
+        <p>We rely on trusted third-party tools to operate our website and handle inquiries:</p>
+        <ul>
+          <li><strong>Form Processing (FormSubmit):</strong> Walkthrough and contact form submissions are securely routed to our business email so we can respond promptly.</li>
+          <li><strong>Analytics &amp; Tag Management (Google Analytics &amp; Google Tag Manager):</strong> Used to measure site traffic and understand how visitors interact with our pages.</li>
+          <li><strong>Visitor Insights (Leadsy.ai):</strong> Used to help us understand business interest in our commercial cleaning services.</li>
+        </ul>
+        <p>These providers process data according to their own privacy policies. You can limit cookies or tracking at any time through your browser settings.</p>
 
-    <h3>Embedded Content</h3>
-    <p>Articles on this site may include embedded content (e.g., videos, images). Embedded content from other websites behaves as if you visited that website directly. These websites may collect data, use cookies, and monitor your interaction with that content.</p>
+        <h2>Mobile &amp; Text Message Privacy</h2>
+        <p>We do not sell, rent, or share mobile phone numbers or SMS opt-in data with third parties for marketing or promotional purposes. Any text message consent you provide is used solely to communicate with you about your cleaning inquiries or services.</p>
 
-    <h3>Analytics</h3>
-    <p>We may use analytics tools to help understand how visitors use our website, so we can improve our services and your experience.</p>
+        <h2>Data Retention &amp; Your Rights</h2>
+        <p>We keep inquiry and client contact information only as long as necessary to provide services, maintain business records, or comply with legal obligations. You may request to access, correct, or delete the personal information we hold about you at any time by contacting us below.</p>
 
-    <h2>How Long We Keep Your Data</h2>
-    <p>Comments and their metadata are kept indefinitely so we can recognize and approve follow-up comments automatically. If you register on our site (if applicable), we store the personal information you provide in your user profile. You can see, edit, or delete your info at any time (except your username). Admins can also see and edit that info.</p>
-
-    <h2>Your Rights Over Your Data</h2>
-    <p>If you have an account or have left comments, you can request an exported file of the personal data we hold about you. You can also request that we erase any personal data we hold, except data we must keep for administrative, legal, or security purposes.</p>
-
-    <h2>Where Your Data Goes</h2>
-    <p>Visitor comments may be checked through an automated spam detection service. We do not share mobile information with third parties for marketing purposes. Text message opt-in data and consent will never be shared with third parties.</p>
-
-    <h2>Contact Us</h2>
-    <p>If you have questions about this Privacy Policy, please contact us at: <br/>
-      📧 <a href="mailto:alabasteriallc@gmail.com">alabasteriallc@gmail.com</a>
-    </p>
+        <h2>Contact Us</h2>
+        <p>If you have questions about this Privacy Policy or want to request changes to your information, please reach out:</p>
+        <p>
+          <strong>Alabasteria Cleaning Services, LLC</strong><br>
+          Email: <a href="mailto:alabasteriallc@gmail.com">alabasteriallc@gmail.com</a><br>
+          Phone: <a href="tel:+16198741093">(619) 874-1093</a>
+        </p>
+      </div>
+    </section>
   </main>
 
-<div class="back-to-home">
-  <a href="index.html" class="btn-home">← Back to Home</a>
-</div>
-  <footer>
-
+  <footer class="wrap footer">
+    <span>&copy; Alabasteria Cleaning Services, LLC</span>
+    <a href="privacy.html" aria-current="page">Privacy Policy</a>
   </footer>
-  <button id="backToTop" title="Back to top">↑ Top</button>
-<script>
-  // Get the button
-  const backToTop = document.getElementById('backToTop');
-
-  // Show button when scroll is more than 300px
-  window.onscroll = function() {
-    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-      backToTop.style.display = "block";
-    } else {
-      backToTop.style.display = "none";
-    }
-  };
-
-  // Click to scroll to top
-  backToTop.onclick = function() {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  };
-</script>
 </body>
 </html>
