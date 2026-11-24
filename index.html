@@ -162,6 +162,90 @@
     @media (max-width: 28rem) {
       .cards { grid-template-columns: 1fr; }
     }
+    /* Sticky Header & Mobile Menu */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(248, 246, 240, 0.96);
+      backdrop-filter: blur(8px);
+    }
+    .menu-toggle {
+      display: none;
+      appearance: none;
+      border: 1px solid var(--line);
+      background: var(--surface);
+      color: var(--ink);
+      font: inherit;
+      font-weight: 700;
+      padding: .45rem .85rem;
+      border-radius: .35rem;
+      cursor: pointer;
+    }
+
+    /* Mobile Bottom Action Bar (hidden on desktop) */
+    .mobile-bar {
+      display: none;
+    }
+
+    @media (max-width: 48rem) {
+      .menu-toggle { display: inline-flex; align-items: center; gap: .4rem; }
+      .site-nav {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: .25rem;
+        padding-top: 1rem;
+        margin-top: .75rem;
+        border-top: 1px solid var(--line);
+      }
+      .site-nav.is-open { display: flex; }
+      .site-nav a {
+        padding: .75rem .5rem;
+        border-radius: .35rem;
+      }
+      .site-nav a:hover { background: var(--tint); text-decoration: none; }
+      .site-nav .button {
+        margin-top: .5rem;
+        width: 100%;
+        padding: .85rem 1rem;
+      }
+
+      /* Better mobile spacing & tap targets */
+      .actions { flex-direction: column; align-items: stretch; }
+      .actions .button, .actions .text-link { text-align: center; padding-block: .85rem; }
+      details { padding: 1rem 0; }
+      body { padding-bottom: 4.5rem; } /* Keeps footer clear of bottom bar */
+
+      /* Sticky Bottom Bar */
+      .mobile-bar {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: .5rem;
+        padding: .6rem .85rem;
+        background: var(--dark);
+        border-top: 2px solid var(--accent);
+        box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.15);
+      }
+      .mobile-bar a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: .7rem .5rem;
+        border-radius: .35rem;
+        font-weight: 750;
+        font-size: .95rem;
+        text-decoration: none;
+      }
+      .mobile-bar .bar-call { background: var(--dark-panel); color: var(--surface); border: 1px solid rgba(255,255,255,0.2); }
+      .mobile-bar .bar-quote { background: var(--accent); color: var(--ink); }
+    }
   </style>
   <script id="vtag-ai-js" async src="https://r2.leadsy.ai/tag.js" data-pid="tVbFJaAp60kP2rGO" data-version="062024"></script>
 </head>
@@ -173,12 +257,15 @@
 
   <a class="skip" href="#main">Skip to content</a>
 
-  <header class="site-header">
+<header class="site-header">
     <div class="wrap header-inner">
       <a class="brand" href="index.html" aria-label="Alabasteria Cleaning Services home">
         <span>Alabasteria</span><small>Cleaning Services</small>
       </a>
-      <nav aria-label="Main navigation">
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        ☰ Menu
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
         <a href="index.html" aria-current="page">Home</a>
         <a href="about.html">About</a>
         <a href="services.html">Services</a>
@@ -328,5 +415,21 @@
     <span>&copy; Alabasteria Cleaning Services, LLC</span>
     <a href="privacy.html">Privacy Policy</a>
   </footer>
+  <!-- Mobile Sticky Action Bar -->
+  <div class="mobile-bar" aria-label="Quick contact actions">
+    <a class="bar-call" href="tel:+16198741093">📞 Call Now</a>
+    <a class="bar-quote" href="pricing.html">Free Quote</a>
+  </div>
+
+  <script>
+    const menuBtn = document.querySelector('.menu-toggle');
+    const siteNav = document.querySelector('#site-nav');
+
+    menuBtn.addEventListener('click', () => {
+      const isOpen = siteNav.classList.toggle('is-open');
+      menuBtn.setAttribute('aria-expanded', isOpen);
+      menuBtn.textContent = isOpen ? '✕ Close' : '☰ Menu';
+    });
+  </script>
 </body>
 </html>
