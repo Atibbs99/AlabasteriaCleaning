@@ -1,138 +1,264 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Schedule a Commercial Cleaning Walkthrough | Alabasteria</title>
-<style>
-      :root {
-        /* Temporary palette. Update these values together when the brand colors are available. */
-        --paper: #f8f6f0;
-        --surface: #ffffff;
-        --ink: #182c2a;
-        --muted: #40534f;
-        --dark: #153c36;
-        --dark-panel: #214b44;
-        --accent: #e5cc99;
-        --tint: #e6eee7;
-        --line: #c9d5ce;
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TNQW6LRN');</script>
+  <!-- End Google Tag Manager -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2Y312FEV8K"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-2Y312FEV8K');
+  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Schedule a Commercial Cleaning Walkthrough | Alabasteria</title>
+  <meta name="description" content="Schedule a free commercial or residential cleaning walkthrough in San Diego with Alabasteria Cleaning Services. Open 24/7." />
+  <link rel="icon" href="Images/Logo-3.ico" type="image/x-icon">
+  <style>
+    :root {
+      /* Temporary palette. Update these values together when the brand colors are available. */
+      --paper: #f8f6f0;
+      --surface: #ffffff;
+      --ink: #182c2a;
+      --muted: #40534f;
+      --dark: #153c36;
+      --dark-panel: #214b44;
+      --accent: #e5cc99;
+      --tint: #e6eee7;
+      --line: #c9d5ce;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font: 1rem/1.65 system-ui, sans-serif;
+    }
+    h1, h2, h3, p { margin: 0; }
+    h1, h2 {
+      font-family: Georgia, serif;
+      font-weight: 500;
+      line-height: 1.06;
+      letter-spacing: -.035em;
+    }
+    h1 { max-width: none; font-size: clamp(2.5rem, 5.5vw, 4.75rem); }
+    h2 { font-size: clamp(1.9rem, 3.8vw, 3.1rem); }
+    h3 { font-size: 1.17rem; line-height: 1.35; }
+    a { color: inherit; text-underline-offset: .22em; }
+    a:focus-visible, button:focus-visible { outline: 3px solid currentColor; outline-offset: 4px; }
+    .wrap { width: min(72rem, calc(100% - 3rem)); margin-inline: auto; }
+    .skip { position: absolute; z-index: 1; background: var(--surface); padding: .5rem 1rem; transform: translateY(-110%); }
+    .skip:focus { transform: translateY(0); }
+
+    /* Sticky Header & Navigation */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(248, 246, 240, 0.96);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--line);
+    }
+    .header-inner, nav, .actions, .section-head, .footer {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .header-inner, .section-head, .footer { justify-content: space-between; gap: 1rem; }
+    .header-inner { padding-block: 1.15rem; }
+    .brand { display: grid; line-height: 1; text-decoration: none; }
+    .brand span { font: 1.9rem/1 Georgia, serif; }
+    .brand small { margin-top: .35rem; font-size: .79rem; text-transform: uppercase; letter-spacing: .13em; }
+    nav { gap: .45rem 1.4rem; }
+    nav a { font-weight: 600; text-decoration: none; }
+    nav a:hover, nav a[aria-current="page"] { text-decoration: underline; }
+
+    .menu-toggle {
+      display: none;
+      appearance: none;
+      border: 1px solid var(--line);
+      background: var(--surface);
+      color: var(--ink);
+      font: inherit;
+      font-weight: 700;
+      padding: .45rem .85rem;
+      border-radius: .35rem;
+      cursor: pointer;
+    }
+
+    /* Buttons */
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: .7rem 1.15rem;
+      border-radius: .35rem;
+      font-weight: 750;
+      text-decoration: none;
+      border: 0;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 1rem;
+    }
+    .button:hover { text-decoration: underline; }
+    .button-dark { background: var(--dark); color: var(--surface); }
+    .button-light { background: var(--accent); color: var(--ink); }
+
+    /* Hero & Form */
+    .hero, .contact-band { background: var(--dark); color: var(--surface); }
+    .eyebrow { color: var(--accent); font-weight: 700; margin-bottom: 1rem; }
+    .intro { max-width: 48ch; font-size: 1.12rem; margin-top: 1.35rem; }
+    .actions { gap: .8rem 1.3rem; margin-top: 1.65rem; }
+    .hero-panel { padding: clamp(1.1rem, 3vw, 2rem); background: var(--dark-panel); border-top: 3px solid var(--accent); }
+    .hero-panel h2 { font-size: 1.65rem; }
+    .offer { max-width: 48rem; margin-top: 1.6rem; }
+    .offer p { margin-top: .65rem; color: rgba(255,255,255,0.9); }
+
+    .section { padding-block: clamp(2.6rem, 6.5vw, 5.25rem); }
+    .card { background: var(--surface); border: 1px solid var(--line); border-radius: .55rem; padding: clamp(1.35rem, 3.5vw, 2.25rem); }
+    .card h2 { font-size: clamp(1.6rem, 4vw, 2.35rem); margin-bottom: 1.1rem; }
+    .request { margin-top: .5rem; }
+    #booking { scroll-margin-top: 5.5rem; }
+
+    .fields { display: grid; gap: 1rem; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .notes { margin-block: 1rem; }
+    label { display: grid; gap: .35rem; font-weight: 650; }
+    [hidden] { display: none !important; }
+    input, select, textarea {
+      width: 100%;
+      min-width: 0;
+      min-height: 2.75rem;
+      border: 1px solid var(--muted);
+      border-radius: .35rem;
+      background: var(--surface);
+      color: var(--ink);
+      padding: .5rem .65rem;
+      font: inherit;
+    }
+
+    .footer { padding-block: 1.4rem; border-top: 1px solid var(--line); }
+
+    /* Mobile Bottom Action Bar (hidden on desktop) */
+    .mobile-bar { display: none; }
+
+    @media (max-width: 48rem) {
+      .wrap { width: calc(100% - 2rem); }
+
+      /* Mobile Navigation */
+      .menu-toggle { display: inline-flex; align-items: center; gap: .4rem; }
+      .site-nav {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: .25rem;
+        padding-top: 1rem;
+        margin-top: .75rem;
+        border-top: 1px solid var(--line);
       }
-      *, *::before, *::after { box-sizing: border-box; }
-      body {
-        margin: 0;
-        background: var(--paper);
-        color: var(--ink);
-        font: 1rem/1.65 system-ui, sans-serif;
+      .site-nav.is-open { display: flex; }
+      .site-nav a {
+        padding: .75rem .5rem;
+        border-radius: .35rem;
       }
-      h1, h2, h3, p { margin: 0; }
-      h1, h2 {
-        font-family: Georgia, serif;
-        font-weight: 500;
-        line-height: 1.06;
-        letter-spacing: -.035em;
+      .site-nav a:hover { background: var(--tint); text-decoration: none; }
+      .site-nav .button {
+        margin-top: .5rem;
+        width: 100%;
+        padding: .85rem 1rem;
       }
-      h1 { max-width: 13ch; font-size: clamp(2.65rem, 6vw, 5.2rem); }
-      h2 { font-size: clamp(2rem, 4vw, 3.35rem); }
-      h3 { font-size: 1.17rem; line-height: 1.35; }
-      a { color: inherit; text-underline-offset: .22em; }
-      a:focus-visible, summary:focus-visible { outline: 3px solid currentColor; outline-offset: 4px; }
-      .wrap { width: min(72rem, calc(100% - 3rem)); margin-inline: auto; }
-      .skip { position: absolute; z-index: 1; background: var(--surface); padding: .5rem 1rem; transform: translateY(-110%); }
-      .skip:focus { transform: translateY(0); }
-      .site-header { background: var(--paper); }
-      .header-inner, nav, .actions, .section-head, .footer {
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
+
+      /* Full-Width Mobile Buttons */
+      .actions { flex-direction: column; align-items: stretch; }
+      .actions .button { text-align: center; padding-block: .85rem; }
+      #send { width: 100%; padding-block: .9rem; }
+      body { padding-bottom: 4.5rem; }
+
+      /* Sticky Bottom Bar */
+      .mobile-bar {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: .5rem;
+        padding: .6rem .85rem;
+        background: var(--dark);
+        border-top: 2px solid var(--accent);
+        box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.15);
       }
-      .header-inner, .section-head, .footer { justify-content: space-between; gap: 1rem; }
-      .header-inner { padding-block: 1.15rem; }
-      .brand { display: grid; line-height: 1; text-decoration: none; }
-      .brand span { font: 1.9rem/1 Georgia, serif; }
-      .brand small { margin-top: .35rem; font-size: .79rem; text-transform: uppercase; letter-spacing: .13em; }
-      nav { gap: .45rem 1.4rem; }
-      nav a { font-weight: 600; text-decoration: none; }
-      nav a:hover { text-decoration: underline; }
-      .button {
+      .mobile-bar a {
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        padding: .7rem 1.15rem;
+        padding: .7rem .5rem;
         border-radius: .35rem;
         font-weight: 750;
+        font-size: .95rem;
         text-decoration: none;
       }
-      .button:hover { text-decoration: underline; }
-      .button-dark { background: var(--dark); color: var(--surface); }
-      .button-light { background: var(--accent); color: var(--ink); }
-      .hero, .contact-band { background: var(--dark); color: var(--surface); }
-      .hero-inner, .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(1.4rem, 5vw, 5rem); }
-      .hero-inner { grid-template-columns: 1.45fr 1fr; align-items: end; padding-block: clamp(3rem, 9vw, 7.5rem); }
-      .eyebrow { color: var(--accent); font-weight: 700; margin-bottom: 1rem; }
-      .intro { max-width: 48ch; font-size: 1.12rem; margin-top: 1.35rem; }
-      .actions { gap: .8rem 1.3rem; margin-top: 1.65rem; }
-      .text-link { font-weight: 700; }
-      .hero-panel { padding: clamp(1rem, 3vw, 2rem); background: var(--dark-panel); border-top: 3px solid var(--accent); }
-      .hero-panel h2 { font-size: 1.7rem; }
-      .hero-panel ul { list-style: none; padding: 0; margin: .65rem 0 0; }
-      .hero-panel li { border-bottom: 1px solid var(--line); padding: .7rem 0; }
-      .hero-panel li:last-child { border-bottom: 0; }
-      .section { padding-block: clamp(2.6rem, 7vw, 5.75rem); }
-      .cards { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; margin-top: 1.8rem; }
-      .card { background: var(--surface); border: 1px solid var(--line); border-radius: .55rem; padding: 1.35rem; }
-      .card p { margin-top: .6rem; color: var(--muted); }
-      .about-band { background: var(--tint); }
-      .about-band p { margin-bottom: 1rem; }
-      details { border-top: 1px solid var(--line); padding: .8rem 0; }
-      details:last-child { border-bottom: 1px solid var(--line); }
-      summary { cursor: pointer; font-weight: 700; }
-      details p { margin: .5rem 0 .2rem; color: var(--muted); }
-      .contact-band p { margin-block: .8rem 1.1rem; }
-      .contact-info { display: grid; align-content: start; gap: .2rem; overflow-wrap: anywhere; }
-      .footer { padding-block: 1.4rem; }
-      @media (max-width: 56rem) {
-        .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      }
-      @media (max-width: 42rem) {
-        .hero-inner, .two-col { grid-template-columns: 1fr; }
-        .wrap { width: calc(100% - 2rem); }
-        nav { column-gap: 1rem; }
-      }
-      @media (max-width: 28rem) {
-        .cards { grid-template-columns: 1fr; }
-      }
-    
-      .hero h1 { max-width:none; }
-      .offer { max-width:48rem; margin-top:1.6rem; }
-      .offer p { margin-top:.65rem; }
-      .fields { display:grid; gap:1rem; grid-template-columns:repeat(2,minmax(0,1fr)); }
-      .notes { margin-block:1rem; }
-      @media (max-width:32rem) { .fields { grid-template-columns:1fr; } }
-      .card h2 { font-size:clamp(1.6rem,4vw,2.35rem); margin-bottom:1.1rem; }
-      .request { margin-top:1rem; }
-      label { display:grid; gap:.35rem; font-weight:650; }
-      [hidden] { display:none !important; }
-      input, select, textarea { width:100%; min-width:0; min-height:2.75rem; border:1px solid var(--muted); border-radius:.35rem; background:var(--surface); color:var(--ink); padding:.5rem .65rem; font:inherit; }
-      .button { border:0; cursor:pointer; font-family:inherit; font-size:1rem; }
-    </style>
+      .mobile-bar .bar-call { background: var(--dark-panel); color: var(--surface); border: 1px solid rgba(255,255,255,0.2); }
+      .mobile-bar .bar-quote { background: var(--accent); color: var(--ink); }
+    }
+    @media (max-width: 36rem) {
+      .fields { grid-template-columns: 1fr; }
+    }
+  </style>
+  <script id="vtag-ai-js" async src="https://r2.leadsy.ai/tag.js" data-pid="tVbFJaAp60kP2rGO" data-version="062024"></script>
 </head>
 <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TNQW6LRN"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
   <a class="skip" href="#main">Skip to content</a>
-  <header class="site-header"><div class="wrap header-inner">
-    <a class="brand" href="index.html"><span>Alabasteria</span><small>Cleaning Services</small></a>
-    <nav aria-label="Main navigation"><a href="index.html">Home</a><a href="services.html">Services</a><a href="tel:+16198741093">Call (619) 874-1093</a></nav>
-  </div></header>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html" aria-label="Alabasteria Cleaning Services home">
+        <span>Alabasteria</span><small>Cleaning Services</small>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        ☰ Menu
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="why.html">Why Us?</a>
+        <a href="gallery.html">Gallery</a>
+        <a class="button button-dark" href="pricing.html" aria-current="page">Get a Free Quote</a>
+      </nav>
+    </div>
+  </header>
+
   <main id="main">
-    <section class="hero"><div class="wrap section">
-      <p class="eyebrow">Commercial cleaning · San Diego, CA</p>
-      <h1>Schedule a Walkthrough</h1>
-      <p class="intro">Show us your facility and tell us what needs cleaning. We’ll use the walkthrough to prepare your quote.</p>
-      <div class="hero-panel offer">
-        <h2>Recurring commercial cleaning starts at $100 per week.</h2>
-        <p>Your quote depends on your facility size, cleaning needs, and visit frequency. One-time cleaning is quoted individually.</p>
+    <section class="hero">
+      <div class="wrap section">
+        <p class="eyebrow">Open 24/7 · Commercial &amp; Residential · San Diego, CA</p>
+        <h1>Schedule a Walkthrough</h1>
+        <p class="intro">Show us your facility and tell us what needs cleaning. We’ll use the walkthrough to prepare your quote.</p>
+        <div class="hero-panel offer">
+          <h2>Recurring commercial cleaning starts at $100 per week.</h2>
+          <p>Your quote depends on your facility size, cleaning needs, and visit frequency. One-time cleaning is quoted individually.</p>
+        </div>
+        <div class="actions">
+          <a class="button button-light" href="#booking">Request a Walkthrough</a>
+        </div>
       </div>
-      <div class="actions"><a class="button button-light" href="#booking">Request a Walkthrough</a></div>
-    </div></section>
+    </section>
+
     <div class="wrap section">
       <form id="booking" action="https://formsubmit.co/alabasteriallc@gmail.com" method="POST">
         <!-- FormSubmit settings -->
@@ -167,8 +293,30 @@
       </form>
     </div>
   </main>
-  <footer class="wrap footer"><span>&copy; Alabasteria Cleaning Services, LLC</span><a href="privacy.html">Privacy Policy</a></footer>
+
+  <footer class="wrap footer">
+    <span>&copy; Alabasteria Cleaning Services, LLC</span>
+    <a href="privacy.html">Privacy Policy</a>
+  </footer>
+
+  <!-- Mobile Sticky Action Bar -->
+  <div class="mobile-bar" aria-label="Quick contact actions">
+    <a class="bar-call" href="tel:+16198741093">📞 Call Now</a>
+    <a class="bar-quote" href="#booking">Request Form</a>
+  </div>
+
   <script>
+    // Mobile Menu Toggle
+    const menuBtn = document.querySelector('.menu-toggle');
+    const siteNav = document.querySelector('#site-nav');
+
+    menuBtn.addEventListener('click', () => {
+      const isOpen = siteNav.classList.toggle('is-open');
+      menuBtn.setAttribute('aria-expanded', isOpen);
+      menuBtn.textContent = isOpen ? '✕ Close' : '☰ Menu';
+    });
+
+    // Walkthrough Form Logic
     const form = document.querySelector('#booking');
     const service = document.querySelector('#service');
     const frequency = document.querySelector('#frequency');
